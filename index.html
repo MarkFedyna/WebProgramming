@@ -7,6 +7,10 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <div class="theme-controls">
+        <button id="theme-toggle" class="btn-theme">🌙 Night Mode</button>
+    </div>
+
     <div class="cv-container">
         <header>
             <div class="name-block">
@@ -20,11 +24,9 @@
         </header>
 
         <main>
-
             <div class="col-left">
                 <section id="experience">
                     <h2>Experience</h2>
-                    
                     <div class="job-item">
                         <h3>Full-stack розробник | Компанія "Insiders"</h3>
                         <p class="item-meta">Квітень 2025 – Дотепер</p>
@@ -32,6 +34,13 @@
                             Розробка сучасних веб-додатків з використанням повного стеку технологій. 
                             Робота над архітектурою проектів та інтеграція нових функціональних можливостей.
                         </p>
+                    </div>
+                </section>
+
+                <section id="comments-section">
+                    <h2>Відгуки від роботодавців</h2>
+                    <div id="comments-container" class="comments-list">
+                        <p>Завантаження коментарів...</p>
                     </div>
                 </section>
             </div>
@@ -55,7 +64,8 @@
                             <h3>Technical Skills</h3>
                             <ul class="skills-list">
                                 <li>Git / GitHub / Docker / AWS</li>
-                                <li>JavaScript / TypeScript / Node.js</li>
+                                <li>JavaScript / TypeScript</li>
+                                <li>Node.js / Express.js / NestJS</li>
                                 <li>React / Next.js / React Native</li>
                                 <li>SQL / NoSQL (MongoDB, PostgreSQL)</li>
                             </ul>
@@ -76,8 +86,37 @@
         </main>
 
         <footer>
-        <p>&copy; 2026 Федина Марк. Створено в рамках навчального предмету "Технології вебпрограмування".</p>
+            <div id="system-info" class="system-info"></div>
+            <p>&copy; 2026 Федина Марк. Лабораторна робота №4: Технології вебпрограмування.</p>
         </footer>
     </div>
+
+    <div id="feedback-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Форма зворотного зв'язку</h2>
+            <form action="https://formspree.io/f/xkovppzb" method="POST">
+                <div class="form-group">
+                    <label for="name">Ваше ім’я</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Номер телефону</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Повідомлення</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="btn-submit">Відправити</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
