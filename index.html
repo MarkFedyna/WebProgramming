@@ -4,63 +4,80 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Резюме - Федина Марк</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Федина Марк</h1>
-        <p>Full-stack розробник</p>
-    </header>
+    <div class="cv-container">
+        <header>
+            <div class="name-block">
+                <h1>Федина<br>Марк</h1>
+            </div>
+            <div class="contact-header">
+                <p>markfedina5@gmail.com</p>
+                <p>+380960085772</p>
+                <p>Львів, Україна</p>
+            </div>
+        </header>
 
-    <hr>
+        <main>
 
-    <section id="contact-info">
-        <h2>Контактна інформація</h2>
-        <ul>
-            <li><strong>Email:</strong>markfedina5@gmail.com</li>
-            <li><strong>Телефон:</strong>+380960085772</li>
-            <li><strong>Місто:</strong> Львів, Україна</li>
-        </ul>
-    </section>
+            <div class="col-left">
+                <section id="experience">
+                    <h2>Experience</h2>
+                    
+                    <div class="job-item">
+                        <h3>Full-stack розробник | Компанія "Insiders"</h3>
+                        <p class="item-meta">Квітень 2025 – Дотепер</p>
+                        <p class="item-description">
+                            Розробка сучасних веб-додатків з використанням повного стеку технологій. 
+                            Робота над архітектурою проектів та інтеграція нових функціональних можливостей.
+                        </p>
+                    </div>
+                </section>
+            </div>
 
-    <section id="education">
-        <h2>Освіта</h2>
-        <div>
-            <h3>Національний університет "Львівська політехніка"</h3>
-            <p>Спеціальність: Кібербезпека</p>
-            <p><em>2024 - теперішній час</em></p>
-        </div>
-    </section>
+            <div class="col-right">
+                <section id="education">
+                    <h2>Education</h2>
+                    <div class="info-section">
+                        <div class="section-content">
+                            <h3>Львівська політехніка</h3>
+                            <p class="item-meta">2024 – Теперішній час</p>
+                            <p>Спеціальність: Кібербезпека</p>
+                        </div>
+                    </div>
+                </section>
 
-    <section id="experience">
-        <h2>Досвід роботи</h2>
-        <p>Full-stack розробник, компанія "Insiders"</p>
-        <p><em>Квітень 2025 - дотепер</em></p>
-    </section>
+                <section id="skills">
+                    <h2>Skills</h2>
+                    <div class="info-section">
+                        <div class="section-content">
+                            <h3>Technical Skills</h3>
+                            <ul class="skills-list">
+                                <li>Git / GitHub / Docker / AWS</li>
+                                <li>JavaScript / TypeScript / Node.js</li>
+                                <li>React / Next.js / React Native</li>
+                                <li>SQL / NoSQL (MongoDB, PostgreSQL)</li>
+                            </ul>
+                        </div>
+                    </div>
 
-    <section id="skills">
-        <h2>Тіхнічні навички</h2>
-        <ul>
-            <li>Git / GitHub</li>
-            <li>Networking</li>
-            <li>JavaScript/Typescript</li>
-            <li>React/Next.js/React Native</li>
-            <li>Node.js/Express/NestJS</li>
-            <li>SQL/NoSQL</li>
-            <li>Docker</li>
-            <li>AWS</li>
-        </ul>
-    </section>
+                    <div class="info-section">
+                        <div class="section-content">
+                            <h3>Languages</h3>
+                            <ul class="languages-list">
+                                <li>Українська — Рідна</li>
+                                <li>Англійська — Upper-Intermediate</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
 
-    <section id="languages">
-        <h2>Знання мов</h2>
-        <ul>
-            <li>Українська — Рідна</li>
-            <li>Англійська — Intermediate</li>
-        </ul>
-    </section>
-
-    <footer>
+        <footer>
         <p>&copy; 2026 Федина Марк. Створено в рамках навчального предмету "Технології вебпрограмування".</p>
-    </footer>
+        </footer>
+    </div>
 </body>
 </html>
