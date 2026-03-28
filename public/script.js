@@ -59,6 +59,35 @@ function initFeedbackModal() {
         modal.style.display = 'block';
     }, 60000);
 
+    const contactForm = document.getElementById('contact-form');
+    if (contactForm) {
+        contactForm.onsubmit = async (e) => {
+            e.preventDefault();
+            const formData = new FormData(contactForm);
+            const data = Object.fromEntries(formData.entries());
+
+            try {
+                const response = await fetch('/api/contact', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(data)
+                });
+                
+                const result = await response.json();
+                if (response.ok) {
+                    alert('Дякуємо! Ваше повідомлення надіслано.');
+                    modal.style.display = 'none';
+                    contactForm.reset();
+                } else {
+                    alert('Помилка: ' + result.error);
+                }
+            } catch (error) {
+                console.error('Error submitting form:', error);
+                alert('Не вдалося зв’язатися з сервером.');
+            }
+        };
+    }
+
     closeBtn.onclick = () => {
         modal.style.display = 'none';
     };

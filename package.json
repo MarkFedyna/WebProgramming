@@ -1,0 +1,20 @@
+{
+  "name": "lab_2",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "tunnel": "ssh -p 443 -R0:localhost:4000 a.pinggy.io"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@feathersjs/errors": "^5.0.42",
+    "@feathersjs/express": "^5.0.42",
+    "@feathersjs/feathers": "^5.0.42",
+    "dotenv": "^17.3.1",
+    "resend": "^6.9.4"
+  }
+}
